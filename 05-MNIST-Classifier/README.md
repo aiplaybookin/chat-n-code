@@ -12,6 +12,6 @@ This repository contains a machine learning pipeline for a MNIST classifier. The
 
 ## Test 3: Model Robustness - rotation
 
-## Test 4: Model Robustness - perturbation
+## Test 4: Model Robustness - perturbation (noise and blur)
 
 ## Test 5: Model Output Shape

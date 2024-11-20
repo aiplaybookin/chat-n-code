@@ -24,7 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
-          PYTHONPATH=$PYTHONPATH:$(pwd)/05-MNIST-Classifier pytest 05-MNIST-Classifier/tests/
+          PYTHONPATH=$PYTHONPATH:$(pwd)/05-MNIST-Classifier pytest 05-MNIST-Classifier/tests/ -s
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
