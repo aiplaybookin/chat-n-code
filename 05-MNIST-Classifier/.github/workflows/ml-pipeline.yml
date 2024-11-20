@@ -1,6 +1,9 @@
-name: ML Pipeline
+name: ML Pipeline for MNIST
 
-on: [push]
+on:
+  push:
+    paths:
+      - "05-MNIST-Classifier/**"
 
 jobs:
   build-and-test:
@@ -21,14 +24,14 @@ jobs:
 
       - name: Run tests
         run: |
-          PYTHONPATH=$PYTHONPATH:$(pwd) pytest tests/
+          PYTHONPATH=$PYTHONPATH:$(pwd)/05-MNIST-Classifier pytest 05-MNIST-Classifier/tests/
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: ml-artifacts
           path: |
-            model_*.pth
-            test_samples/
-            test_samples/rotation_test/
-            test_samples/perturbation_test/
+            05-MNIST-Classifier/model_*.pth
+            05-MNIST-Classifier/test_samples/
+            05-MNIST-Classifier/test_samples/rotation_test/
+            05-MNIST-Classifier/test_samples/perturbation_test/
