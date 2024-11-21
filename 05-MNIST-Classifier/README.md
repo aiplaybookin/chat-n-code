@@ -15,3 +15,9 @@ This repository contains a machine learning pipeline for a MNIST classifier. The
 ## Test 4: Model Robustness - perturbation (noise and blur)
 
 ## Test 5: Model Output Shape
+
+To test the code, run the following command:
+
+```bash
+pytest tests/ -s  --cov=.  --cov-report=xml:./coverage.xml --cov-report=term
+```
